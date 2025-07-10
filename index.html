@@ -3,16 +3,15 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <title>Happy Birthday Sayang</title>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
     body {
       margin: 0;
       padding: 0;
-      font-family: 'Pacifico', cursive;
+      font-family: 'Quicksand', sans-serif;
       background-color: #ffe6f0;
-      overflow: hidden;
     }
     .slide {
       display: none;
@@ -20,23 +19,26 @@
       align-items: center;
       justify-content: center;
       text-align: center;
-      height: 100vh;
+      min-height: 100vh;
       padding: 20px;
+      box-sizing: border-box;
     }
     .slide.active {
       display: flex;
       animation: fade 1s;
     }
     img {
-      max-width: 80%;
+      max-width: 90%;
       height: auto;
       border-radius: 20px;
       box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
     }
     .text {
-      font-size: 2em;
+      font-size: 1.6em;
       margin: 20px;
       color: #c2185b;
+      max-height: 40vh;
+      overflow-y: auto;
     }
     button {
       background-color: #f06292;
@@ -124,12 +126,10 @@
 
 <div class="slide">
   <div class="text">
-    Selamat ulang tahun pacarku yang paling aku sayang...<br><br>
-    Setiap detik bersamamu adalah hadiah yang tak terganti.<br>
-    Kamu adalah alasan aku tersenyum tanpa alasan,<br>
-    dan kamu selalu jadi tempat pulang terhangat yang aku punya.<br>
-    Semoga di hari spesial ini, kamu merasa seistimewa kamu buat aku setiap hari.<br>
-    Aku cinta kamu, hari ini, besok, dan selamanya. 💖
+    Hari ini adalah hari spesialmu, tapi bagiku setiap hari bersamamu adalah hari yang luar biasa.<br><br>
+    Terima kasih sudah selalu hadir dengan senyum yang bisa nyembuhin capekku, peluk yang nenangin, dan cinta yang gak pernah setengah-setengah.<br><br>
+    Aku janji akan terus ada, ngedukung kamu, nyayangin kamu, dan nemenin kamu sampai kapan pun kamu mau.<br><br>
+    Happy Birthday, Cinta. Semoga dunia sebaik kamu hari ini. 💖
   </div>
   <img src="images/foto5.jpeg" alt="Foto 5" />
   <button onclick="alert('💌 Love dikirim!')">💌 Kirim Love</button>
