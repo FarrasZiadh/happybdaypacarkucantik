@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Happy Birthday Sayang</title>
+    <style>
+        body {{
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #000;
+            color: #fff;
+            overflow: hidden;
+        }}
+        .slide {{
+            display: none;
+            text-align: center;
+            padding: 50px;
+        }}
+        .slide img {{
+            max-width: 80%;
+            height: auto;
+            border-radius: 20px;
+            box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
+        }}
+        .text {{
+            font-size: 2em;
+            margin: 20px 0;
+        }}
+        .active {{
+            display: block;
+            animation: fade 1s;
+        }}
+        @keyframes fade {{
+            from {{ opacity: 0; }}
+            to {{ opacity: 1; }}
+        }}
+    </style>
+</head>
+<body>
+
+<div class="slide active">
+    <div class="text">Happy Birthday, Sayang!</div>
+    <img src="images/foto1.jpeg" alt="Foto 1">
+</div>
+
+<div class="slide">
+    <div class="text">Ini hari pertama kita kenal, sayang.</div>
+    <img src="images/foto2.jpeg" alt="Foto 2">
+</div>
+
+<div class="slide">
+    <div class="text">Ini setengah tahun kita bersama.</div>
+    <img src="images/foto3.jpeg" alt="Foto 3">
+</div>
+
+<div class="slide">
+    <div class="text">Dan ini kita sekarang.</div>
+    <img src="images/foto4.jpeg" alt="Foto 4">
+</div>
+
+<div class="slide">
+    <div class="text">Selamat ulang tahun pacarku yang paling aku sayang...<br><br>
+        Setiap detik bersamamu adalah hadiah yang tak terganti.<br>
+        Kamu adalah alasan aku tersenyum tanpa alasan,<br>
+        dan kamu selalu jadi tempat pulang terhangat yang aku punya.<br>
+        Semoga di hari spesial ini, kamu merasa seistimewa kamu buat aku setiap hari.<br>
+        Aku cinta kamu, hari ini, besok, dan selamanya. 💖
+    </div>
+    <img src="images/foto5.jpeg" alt="Foto 5">
+</div>
+
+<script>
+    let slideIndex = 0;
+    const slides = document.querySelectorAll('.slide');
+    const showSlides = () => {{
+        slides.forEach(s => s.classList.remove('active'));
+        slideIndex = (slideIndex + 1) % slides.length;
+        slides[slideIndex].classList.add('active');
+    }};
+    setInterval(showSlides, 5000); // ganti slide setiap 5 detik
+</script>
+
+</body>
+</html>
