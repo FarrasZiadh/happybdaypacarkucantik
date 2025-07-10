@@ -2,83 +2,159 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <title>Happy Birthday Sayang</title>
-    <style>
-        body {{
-            margin: 0;
-            font-family: 'Segoe UI', sans-serif;
-            background-color: #000;
-            color: #fff;
-            overflow: hidden;
-        }}
-        .slide {{
-            display: none;
-            text-align: center;
-            padding: 50px;
-        }}
-        .slide img {{
-            max-width: 80%;
-            height: auto;
-            border-radius: 20px;
-            box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
-        }}
-        .text {{
-            font-size: 2em;
-            margin: 20px 0;
-        }}
-        .active {{
-            display: block;
-            animation: fade 1s;
-        }}
-        @keyframes fade {{
-            from {{ opacity: 0; }}
-            to {{ opacity: 1; }}
-        }}
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday Sayang</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Pacifico', cursive;
+      background-color: #ffe6f0;
+      overflow: hidden;
+    }
+    .slide {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      height: 100vh;
+      padding: 20px;
+    }
+    .slide.active {
+      display: flex;
+      animation: fade 1s;
+    }
+    img {
+      max-width: 80%;
+      height: auto;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    }
+    .text {
+      font-size: 2em;
+      margin: 20px;
+      color: #c2185b;
+    }
+    button {
+      background-color: #f06292;
+      color: white;
+      border: none;
+      padding: 15px 30px;
+      font-size: 1em;
+      border-radius: 30px;
+      cursor: pointer;
+      margin-top: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+    button:hover {
+      background-color: #ec407a;
+    }
+    @keyframes fade {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+    .heart {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: pink;
+      transform: rotate(45deg);
+      animation: float 6s infinite;
+    }
+    .heart::before, .heart::after {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: pink;
+      border-radius: 50%;
+    }
+    .heart::before {
+      top: -10px;
+      left: 0;
+    }
+    .heart::after {
+      left: -10px;
+      top: 0;
+    }
+    @keyframes float {
+      0% {
+        transform: translateY(0) rotate(45deg);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-100vh) rotate(45deg);
+        opacity: 0;
+      }
+    }
+  </style>
 </head>
 <body>
 
+<audio autoplay loop>
+  <source src="https://www.bensound.com/bensound-music/bensound-romantic.mp3" type="audio/mp3">
+</audio>
+
 <div class="slide active">
-    <div class="text">Happy Birthday, Sayang!</div>
-    <img src="images/foto1.jpeg" alt="Foto 1">
+  <div class="text">Happy Birthday, Sayang!</div>
+  <img src="images/foto1.jpeg" alt="Foto 1" />
+  <button onclick="nextSlide()">Next</button>
 </div>
 
 <div class="slide">
-    <div class="text">Ini hari pertama kita kenal, sayang.</div>
-    <img src="images/foto2.jpeg" alt="Foto 2">
+  <div class="text">Ini hari pertama kita kenal, sayang.</div>
+  <img src="images/foto2.jpeg" alt="Foto 2" />
+  <button onclick="nextSlide()">Next</button>
 </div>
 
 <div class="slide">
-    <div class="text">Ini setengah tahun kita bersama.</div>
-    <img src="images/foto3.jpeg" alt="Foto 3">
+  <div class="text">Ini setengah tahun kita bersama.</div>
+  <img src="images/foto3.jpeg" alt="Foto 3" />
+  <button onclick="nextSlide()">Next</button>
 </div>
 
 <div class="slide">
-    <div class="text">Dan ini kita sekarang.</div>
-    <img src="images/foto4.jpeg" alt="Foto 4">
+  <div class="text">Dan ini kita sekarang.</div>
+  <img src="images/foto4.jpeg" alt="Foto 4" />
+  <button onclick="nextSlide()">Next</button>
 </div>
 
 <div class="slide">
-    <div class="text">Selamat ulang tahun pacarku yang paling aku sayang...<br><br>
-        Setiap detik bersamamu adalah hadiah yang tak terganti.<br>
-        Kamu adalah alasan aku tersenyum tanpa alasan,<br>
-        dan kamu selalu jadi tempat pulang terhangat yang aku punya.<br>
-        Semoga di hari spesial ini, kamu merasa seistimewa kamu buat aku setiap hari.<br>
-        Aku cinta kamu, hari ini, besok, dan selamanya. 💖
-    </div>
-    <img src="images/foto5.jpeg" alt="Foto 5">
+  <div class="text">
+    Selamat ulang tahun pacarku yang paling aku sayang...<br><br>
+    Setiap detik bersamamu adalah hadiah yang tak terganti.<br>
+    Kamu adalah alasan aku tersenyum tanpa alasan,<br>
+    dan kamu selalu jadi tempat pulang terhangat yang aku punya.<br>
+    Semoga di hari spesial ini, kamu merasa seistimewa kamu buat aku setiap hari.<br>
+    Aku cinta kamu, hari ini, besok, dan selamanya. 💖
+  </div>
+  <img src="images/foto5.jpeg" alt="Foto 5" />
+  <button onclick="alert('💌 Love dikirim!')">💌 Kirim Love</button>
 </div>
 
 <script>
-    let slideIndex = 0;
-    const slides = document.querySelectorAll('.slide');
-    const showSlides = () => {{
-        slides.forEach(s => s.classList.remove('active'));
-        slideIndex = (slideIndex + 1) % slides.length;
-        slides[slideIndex].classList.add('active');
-    }};
-    setInterval(showSlides, 5000); // ganti slide setiap 5 detik
+  let slideIndex = 0;
+  const slides = document.querySelectorAll('.slide');
+  function nextSlide() {
+    slides[slideIndex].classList.remove('active');
+    slideIndex++;
+    if (slideIndex >= slides.length) slideIndex = slides.length - 1;
+    slides[slideIndex].classList.add('active');
+  }
+
+  // love rain effect
+  setInterval(() => {
+    const heart = document.createElement('div');
+    heart.className = 'heart';
+    heart.style.left = Math.random() * 100 + 'vw';
+    heart.style.top = '100vh';
+    heart.style.animationDuration = 5 + Math.random() * 3 + 's';
+    document.body.appendChild(heart);
+    setTimeout(() => heart.remove(), 8000);
+  }, 300);
 </script>
 
 </body>
